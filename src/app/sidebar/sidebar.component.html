@@ -1,0 +1,22 @@
+<button mat-icon-button>
+  <mat-icon (click)="sidebarmenu.toggle()">menu</mat-icon>
+</button>
+  
+
+  <mat-sidenav-container>
+    <mat-sidenav #sidebarmenu>
+      <mat-nav-list>
+        <a mat-list-item (click)="sidebarmenu.toggle()" [routerLink]="'/home'"> Home </a>
+        <a mat-list-item (click)="sidebarmenu.toggle()" [routerLink]="'/chapter'"> Chapters </a>
+        <a mat-list-item (click)="sidebarmenu.toggle()" [routerLink]="'/why'"> Why? </a>
+        <a mat-list-item (click)="sidebarmenu.toggle()" [routerLink]="'/who'"> Who? </a>
+        <a mat-list-item (click)="sidebarmenu.toggle()" [routerLink]="'/when'"> When </a>
+        <a mat-list-item (click)="sidebarmenu.toggle()" [routerLink]="'/contactme'"> Contact Me </a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <div style="height: 92vh">
+        <router-outlet></router-outlet>
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
